@@ -1,0 +1,1294 @@
+fileFormatVersion: 2
+guid: db458e9e3f94fed459d7be24e8cd904c
+labels:
+- asset_store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Geo
+    100004: soccerplayer2:Head
+    100006: soccerplayer2:HeadTop_End
+    100008: soccerplayer2:Hips
+    100010: soccerplayer2:LeftArm
+    100012: soccerplayer2:LeftFoot
+    100014: soccerplayer2:LeftFootToeBase_End
+    100016: soccerplayer2:LeftForeArm
+    100018: soccerplayer2:LeftHand
+    100020: soccerplayer2:LeftHandIndex1
+    100022: soccerplayer2:LeftHandIndex2
+    100024: soccerplayer2:LeftHandIndex3
+    100026: soccerplayer2:LeftHandIndex4
+    100028: soccerplayer2:LeftHandMiddle1
+    100030: soccerplayer2:LeftHandMiddle2
+    100032: soccerplayer2:LeftHandMiddle3
+    100034: soccerplayer2:LeftHandMiddle4
+    100036: soccerplayer2:LeftHandPinky1
+    100038: soccerplayer2:LeftHandPinky2
+    100040: soccerplayer2:LeftHandPinky3
+    100042: soccerplayer2:LeftHandPinky4
+    100044: soccerplayer2:LeftHandRing1
+    100046: soccerplayer2:LeftHandRing2
+    100048: soccerplayer2:LeftHandRing3
+    100050: soccerplayer2:LeftHandRing4
+    100052: soccerplayer2:LeftHandThumb1
+    100054: soccerplayer2:LeftHandThumb2
+    100056: soccerplayer2:LeftHandThumb3
+    100058: soccerplayer2:LeftHandThumb4
+    100060: soccerplayer2:LeftLeg
+    100062: soccerplayer2:LeftShoulder
+    100064: soccerplayer2:LeftToeBase
+    100066: soccerplayer2:LeftUpLeg
+    100068: soccerplayer2:Neck
+    100070: soccerplayer2:Neck1
+    100072: soccerplayer2:RightArm
+    100074: soccerplayer2:RightFoot
+    100076: soccerplayer2:RightFootToeBase_End
+    100078: soccerplayer2:RightForeArm
+    100080: soccerplayer2:RightHand
+    100082: soccerplayer2:RightHandIndex1
+    100084: soccerplayer2:RightHandIndex2
+    100086: soccerplayer2:RightHandIndex3
+    100088: soccerplayer2:RightHandIndex4
+    100090: soccerplayer2:RightHandMiddle1
+    100092: soccerplayer2:RightHandMiddle2
+    100094: soccerplayer2:RightHandMiddle3
+    100096: soccerplayer2:RightHandMiddle4
+    100098: soccerplayer2:RightHandPinky1
+    100100: soccerplayer2:RightHandPinky2
+    100102: soccerplayer2:RightHandPinky3
+    100104: soccerplayer2:RightHandPinky4
+    100106: soccerplayer2:RightHandRing1
+    100108: soccerplayer2:RightHandRing2
+    100110: soccerplayer2:RightHandRing3
+    100112: soccerplayer2:RightHandRing4
+    100114: soccerplayer2:RightHandThumb1
+    100116: soccerplayer2:RightHandThumb2
+    100118: soccerplayer2:RightHandThumb3
+    100120: soccerplayer2:RightHandThumb4
+    100122: soccerplayer2:RightLeg
+    100124: soccerplayer2:RightShoulder
+    100126: soccerplayer2:RightToeBase
+    100128: soccerplayer2:RightUpLeg
+    100130: soccerplayer2:Spine
+    100132: soccerplayer2:Spine1
+    100134: soccerplayer2:Spine2
+    400000: //RootNode
+    400002: Geo
+    400004: soccerplayer2:Head
+    400006: soccerplayer2:HeadTop_End
+    400008: soccerplayer2:Hips
+    400010: soccerplayer2:LeftArm
+    400012: soccerplayer2:LeftFoot
+    400014: soccerplayer2:LeftFootToeBase_End
+    400016: soccerplayer2:LeftForeArm
+    400018: soccerplayer2:LeftHand
+    400020: soccerplayer2:LeftHandIndex1
+    400022: soccerplayer2:LeftHandIndex2
+    400024: soccerplayer2:LeftHandIndex3
+    400026: soccerplayer2:LeftHandIndex4
+    400028: soccerplayer2:LeftHandMiddle1
+    400030: soccerplayer2:LeftHandMiddle2
+    400032: soccerplayer2:LeftHandMiddle3
+    400034: soccerplayer2:LeftHandMiddle4
+    400036: soccerplayer2:LeftHandPinky1
+    400038: soccerplayer2:LeftHandPinky2
+    400040: soccerplayer2:LeftHandPinky3
+    400042: soccerplayer2:LeftHandPinky4
+    400044: soccerplayer2:LeftHandRing1
+    400046: soccerplayer2:LeftHandRing2
+    400048: soccerplayer2:LeftHandRing3
+    400050: soccerplayer2:LeftHandRing4
+    400052: soccerplayer2:LeftHandThumb1
+    400054: soccerplayer2:LeftHandThumb2
+    400056: soccerplayer2:LeftHandThumb3
+    400058: soccerplayer2:LeftHandThumb4
+    400060: soccerplayer2:LeftLeg
+    400062: soccerplayer2:LeftShoulder
+    400064: soccerplayer2:LeftToeBase
+    400066: soccerplayer2:LeftUpLeg
+    400068: soccerplayer2:Neck
+    400070: soccerplayer2:Neck1
+    400072: soccerplayer2:RightArm
+    400074: soccerplayer2:RightFoot
+    400076: soccerplayer2:RightFootToeBase_End
+    400078: soccerplayer2:RightForeArm
+    400080: soccerplayer2:RightHand
+    400082: soccerplayer2:RightHandIndex1
+    400084: soccerplayer2:RightHandIndex2
+    400086: soccerplayer2:RightHandIndex3
+    400088: soccerplayer2:RightHandIndex4
+    400090: soccerplayer2:RightHandMiddle1
+    400092: soccerplayer2:RightHandMiddle2
+    400094: soccerplayer2:RightHandMiddle3
+    400096: soccerplayer2:RightHandMiddle4
+    400098: soccerplayer2:RightHandPinky1
+    400100: soccerplayer2:RightHandPinky2
+    400102: soccerplayer2:RightHandPinky3
+    400104: soccerplayer2:RightHandPinky4
+    400106: soccerplayer2:RightHandRing1
+    400108: soccerplayer2:RightHandRing2
+    400110: soccerplayer2:RightHandRing3
+    400112: soccerplayer2:RightHandRing4
+    400114: soccerplayer2:RightHandThumb1
+    400116: soccerplayer2:RightHandThumb2
+    400118: soccerplayer2:RightHandThumb3
+    400120: soccerplayer2:RightHandThumb4
+    400122: soccerplayer2:RightLeg
+    400124: soccerplayer2:RightShoulder
+    400126: soccerplayer2:RightToeBase
+    400128: soccerplayer2:RightUpLeg
+    400130: soccerplayer2:Spine
+    400132: soccerplayer2:Spine1
+    400134: soccerplayer2:Spine2
+    4300000: Geo
+    7400000: iPi Default take
+    7400002: high_far
+    7400004: post_far_high
+    9500000: //RootNode
+    13700000: Geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'soccerplayer2:LeftLeg' : position
+      error = 48.129601 mm\n\t'soccerplayer2:LeftFoot' : position error = 48.135086
+      mm\n\t'soccerplayer2:LeftToeBase' : position error = 1.243689 mm\n\t'soccerplayer2:RightLeg'
+      : position error = 48.129601 mm\n\t'soccerplayer2:RightFoot' : position error
+      = 48.135086 mm\n\t'soccerplayer2:RightToeBase' : position error = 1.243689 mm\n\nClip
+      'iPi Default take' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'soccerplayer2:Spine2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: iPi Default take
+      takeName: iPi Default take
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo
+        weight: 0
+      - path: soccerplayer2:Hips
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot/soccerplayer2:LeftToeBase
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot/soccerplayer2:LeftToeBase/soccerplayer2:LeftFootToeBase_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot/soccerplayer2:RightToeBase
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot/soccerplayer2:RightToeBase/soccerplayer2:RightFootToeBase_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2/soccerplayer2:LeftHandIndex3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2/soccerplayer2:LeftHandIndex3/soccerplayer2:LeftHandIndex4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2/soccerplayer2:LeftHandMiddle3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2/soccerplayer2:LeftHandMiddle3/soccerplayer2:LeftHandMiddle4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2/soccerplayer2:LeftHandPinky3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2/soccerplayer2:LeftHandPinky3/soccerplayer2:LeftHandPinky4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2/soccerplayer2:LeftHandRing3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2/soccerplayer2:LeftHandRing3/soccerplayer2:LeftHandRing4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2/soccerplayer2:LeftHandThumb3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2/soccerplayer2:LeftHandThumb3/soccerplayer2:LeftHandThumb4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1/soccerplayer2:Head
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1/soccerplayer2:Head/soccerplayer2:HeadTop_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2/soccerplayer2:RightHandIndex3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2/soccerplayer2:RightHandIndex3/soccerplayer2:RightHandIndex4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2/soccerplayer2:RightHandMiddle3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2/soccerplayer2:RightHandMiddle3/soccerplayer2:RightHandMiddle4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2/soccerplayer2:RightHandPinky3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2/soccerplayer2:RightHandPinky3/soccerplayer2:RightHandPinky4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2/soccerplayer2:RightHandRing3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2/soccerplayer2:RightHandRing3/soccerplayer2:RightHandRing4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2/soccerplayer2:RightHandThumb3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2/soccerplayer2:RightHandThumb3/soccerplayer2:RightHandThumb4
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: high_far
+      takeName: iPi Default take
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo
+        weight: 0
+      - path: soccerplayer2:Hips
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot/soccerplayer2:LeftToeBase
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:LeftUpLeg/soccerplayer2:LeftLeg/soccerplayer2:LeftFoot/soccerplayer2:LeftToeBase/soccerplayer2:LeftFootToeBase_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot/soccerplayer2:RightToeBase
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:RightUpLeg/soccerplayer2:RightLeg/soccerplayer2:RightFoot/soccerplayer2:RightToeBase/soccerplayer2:RightFootToeBase_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2/soccerplayer2:LeftHandIndex3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandIndex1/soccerplayer2:LeftHandIndex2/soccerplayer2:LeftHandIndex3/soccerplayer2:LeftHandIndex4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2/soccerplayer2:LeftHandMiddle3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandMiddle1/soccerplayer2:LeftHandMiddle2/soccerplayer2:LeftHandMiddle3/soccerplayer2:LeftHandMiddle4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2/soccerplayer2:LeftHandPinky3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandPinky1/soccerplayer2:LeftHandPinky2/soccerplayer2:LeftHandPinky3/soccerplayer2:LeftHandPinky4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2/soccerplayer2:LeftHandRing3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandRing1/soccerplayer2:LeftHandRing2/soccerplayer2:LeftHandRing3/soccerplayer2:LeftHandRing4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2/soccerplayer2:LeftHandThumb3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:LeftShoulder/soccerplayer2:LeftArm/soccerplayer2:LeftForeArm/soccerplayer2:LeftHand/soccerplayer2:LeftHandThumb1/soccerplayer2:LeftHandThumb2/soccerplayer2:LeftHandThumb3/soccerplayer2:LeftHandThumb4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1/soccerplayer2:Head
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:Neck/soccerplayer2:Neck1/soccerplayer2:Head/soccerplayer2:HeadTop_End
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2/soccerplayer2:RightHandIndex3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandIndex1/soccerplayer2:RightHandIndex2/soccerplayer2:RightHandIndex3/soccerplayer2:RightHandIndex4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2/soccerplayer2:RightHandMiddle3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandMiddle1/soccerplayer2:RightHandMiddle2/soccerplayer2:RightHandMiddle3/soccerplayer2:RightHandMiddle4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2/soccerplayer2:RightHandPinky3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandPinky1/soccerplayer2:RightHandPinky2/soccerplayer2:RightHandPinky3/soccerplayer2:RightHandPinky4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2/soccerplayer2:RightHandRing3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandRing1/soccerplayer2:RightHandRing2/soccerplayer2:RightHandRing3/soccerplayer2:RightHandRing4
+        weight: 0
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2/soccerplayer2:RightHandThumb3
+        weight: 1
+      - path: soccerplayer2:Hips/soccerplayer2:Spine/soccerplayer2:Spine1/soccerplayer2:Spine2/soccerplayer2:RightShoulder/soccerplayer2:RightArm/soccerplayer2:RightForeArm/soccerplayer2:RightHand/soccerplayer2:RightHandThumb1/soccerplayer2:RightHandThumb2/soccerplayer2:RightHandThumb3/soccerplayer2:RightHandThumb4
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human:
+    - boneName: soccerplayer2:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: soccerplayer2:RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: near_high(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Geo
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Hips
+      position: {x: 0, y: .963793993, z: .0398552492}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftUpLeg
+      position: {x: -.0963378921, y: -.0327325463, z: -1.11758709e-08}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftLeg
+      position: {x: 0, y: -.467250943, z: -.0172996484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftFoot
+      position: {x: -.000126034021, y: -.341943324, z: -.00847686827}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftToeBase
+      position: {x: .00183285773, y: -.120640099, z: .0828226358}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftFootToeBase_End
+      position: {x: -0, y: 0, z: .119999997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightUpLeg
+      position: {x: .0963378921, y: -.0327325463, z: -1.11758709e-08}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightLeg
+      position: {x: 0, y: -.467250943, z: -.0172996484}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightFoot
+      position: {x: -.000126071274, y: -.341943324, z: -.00847686827}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightToeBase
+      position: {x: .00183309615, y: -.120640099, z: .0828226358}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightFootToeBase_End
+      position: {x: -3.19480896e-05, y: 0, z: .119999997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Spine
+      position: {x: 0, y: .0922632217, z: .0157713294}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Spine1
+      position: {x: 0, y: .162540197, z: -.00165605545}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Spine2
+      position: {x: 0, y: .136396408, z: -.0129230469}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftShoulder
+      position: {x: -.0614422597, y: .101870298, z: -.0379324369}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftArm
+      position: {x: -.123190925, y: -.0111297369, z: -.0179345645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftForeArm
+      position: {x: -.276870072, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHand
+      position: {x: -.278737783, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandIndex1
+      position: {x: -.103945374, y: .00614750385, z: .0270549133}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandIndex2
+      position: {x: -.055492878, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandIndex3
+      position: {x: -.0339112282, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandIndex4
+      position: {x: -.0275792331, y: 2.84217088e-16, z: 1.47911416e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandMiddle1
+      position: {x: -.104639053, y: .00614750385, z: .00429786742}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandMiddle2
+      position: {x: -.0579209328, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandMiddle3
+      position: {x: -.0371317267, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandMiddle4
+      position: {x: -.0275792331, y: 2.84217088e-16, z: 1.47911416e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandPinky1
+      position: {x: -.100130022, y: -.00078356266, z: -.0396714136}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandPinky2
+      position: {x: -.036762476, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandPinky3
+      position: {x: -.0281133652, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandPinky4
+      position: {x: -.0192546416, y: 2.84217088e-16, z: 1.47911416e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandRing1
+      position: {x: -.103251636, y: .00321125984, z: -.018755421}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandRing2
+      position: {x: -.0544523001, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandRing3
+      position: {x: -.0371317267, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandRing4
+      position: {x: -.0275792331, y: 2.84217088e-16, z: 1.47911416e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandThumb1
+      position: {x: -.0237851143, y: -.0100289583, z: .0262093544}
+      rotation: {x: -.0434403829, y: .0281334929, z: -.0414990485, w: .997797251}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandThumb2
+      position: {x: -.0336238146, y: -.0100290775, z: .0283977203}
+      rotation: {x: -.0245307405, y: .0819917768, z: -8.85689951e-05, w: .996331096}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandThumb3
+      position: {x: -.0450178385, y: -.0134451389, z: .0217826702}
+      rotation: {x: .0396271572, y: .00582775846, z: .0854936987, w: .995533288}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:LeftHandThumb4
+      position: {x: -.0321438089, y: 0, z: .0148989856}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Neck
+      position: {x: 0, y: .138774633, z: -.043541871}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Neck1
+      position: {x: 0, y: .0434002876, z: .0092689544}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:Head
+      position: {x: 0, y: .0402659178, z: .00858519971}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:HeadTop_End
+      position: {x: -5.17045827e-18, y: .178865969, z: .00123128889}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightShoulder
+      position: {x: .0614019819, y: .101870298, z: -.0379324369}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightArm
+      position: {x: .123231187, y: -.0111297369, z: -.0179345645}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightForeArm
+      position: {x: .276870072, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHand
+      position: {x: .278737843, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandIndex1
+      position: {x: .104665101, y: .00489580631, z: .0271196254}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandIndex2
+      position: {x: .0537676215, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandIndex3
+      position: {x: .033854723, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandIndex4
+      position: {x: .0277305469, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandMiddle1
+      position: {x: .10759604, y: .00489580631, z: .00427798927}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandMiddle2
+      position: {x: .0561677217, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandMiddle3
+      position: {x: .0373634696, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandMiddle4
+      position: {x: .0288025942, y: 5.68434176e-16, z: -2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandPinky1
+      position: {x: .0997145772, y: -.00119149685, z: -.0395400524}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandPinky2
+      position: {x: .0365275741, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandPinky3
+      position: {x: .0278203487, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandPinky4
+      position: {x: .0227667559, y: -2.84217088e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandRing1
+      position: {x: .104702175, y: .00387847424, z: -.0193628147}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandRing2
+      position: {x: .0540127158, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandRing3
+      position: {x: .0339159369, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandRing4
+      position: {x: .0296648573, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandThumb1
+      position: {x: .0251777172, y: -.00936675072, z: .0251366757}
+      rotation: {x: -.0438644253, y: -.0190231912, z: .041284617, w: .998002827}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandThumb2
+      position: {x: .0326378345, y: -.0108696222, z: .0296687968}
+      rotation: {x: -.0281514823, y: -.0989902392, z: -.00529801333, w: .994675994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandThumb3
+      position: {x: .0441652536, y: -.0137027502, z: .0213502347}
+      rotation: {x: .0301484484, y: -.0454257354, z: -.0915199667, w: .994309664}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: soccerplayer2:RightHandThumb4
+      position: {x: .0347618647, y: -.000520370668, z: .0117094601}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e4516200d1b06474ea62af5b7af7809c,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

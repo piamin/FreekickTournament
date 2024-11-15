@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "526339997461",
+    "project_id": "freekick-tournament",
+    "storage_bucket": "freekick-tournament.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526339997461:android:2d69d22e3c213a8ceaf31c",
+        "android_client_info": {
+          "package_name": "com.ketchAp.FootballMiracle.a"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUb3xaQQQnVsVsl-0qyQrZi7P7Lz2CSGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
