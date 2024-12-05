@@ -5,6 +5,8 @@ using System;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Holoville.HOTween;
+using Unity.VisualScripting;
 
 
 public class Shoot : MonoBehaviour
@@ -70,7 +72,7 @@ public class Shoot : MonoBehaviour
     public float _distanceMinX = -25f;
     public float _distanceMaxX = 25f;
 
-    public bool _isShooting = false;
+    public bool _canShoot = false;
     public bool _canControlBall = false;
 
     public Transform _cachedTrans;
@@ -105,14 +107,15 @@ public class Shoot : MonoBehaviour
     }
     public TrailRenderer _effect;
 
-
-
+    public FingerTrail fingerTrail;
+    private float startTime = 0f;
+    private bool shootTriggered = false;
 
     protected virtual void Awake()
     {
         share = this;
         _cachedTrans = transform;
-        _isShooting = true;
+        _canShoot = true;
         _ballParent = _ball.transform.parent;
 
         _distanceMinX = -15f;
@@ -140,16 +143,16 @@ public class Shoot : MonoBehaviour
 
 #if UNITY_WP8 || UNITY_ANDROID
         Time.maximumDeltaTime = 0.2f;
-        Time.fixedDeltaTime = 0.008f;
+        Time.fixedDeltaTime = 0.01f;
 #else
 		Time.maximumDeltaTime = 0.1f;
-		Time.fixedDeltaTime = 0.005f;
+		Time.fixedDeltaTime = 0.01f;
 #endif
 
         orientation = Screen.orientation;
         calculateFactors();
 
-        //_ballControlLimit = 6f;
+        _ballControlLimit = 6f;
         EventChangeBallLimit(_ballControlLimit);
 
         reset();
@@ -189,7 +192,7 @@ public class Shoot : MonoBehaviour
         if (isGameOver) return;  // 게임 종료 시 이벤트 무시
 
         _canControlBall = false;
-        _isShooting = false;
+        _canShoot = false;
 
         currentShots++;
 
@@ -274,6 +277,9 @@ public class Shoot : MonoBehaviour
         factorDown = factorDownConstant / screenHeight;
         factorLeftRight = factorLeftRightConstant / screenWidth;
 
+        if (fingerTrail)
+            factorLeftRight *= 2f;
+
         Debug.Log("Orientation : " + orientation + "\t Screen height = " + screenHeight
             + "\t Screen width = " + screenWidth + "\t factorUp = " + factorUp + "\t factorDown = " + factorDown
             + "\t factorLeftRight = " + factorLeftRight + "\t minDistance = " + minDistance);
@@ -291,20 +297,38 @@ public class Shoot : MonoBehaviour
     void FixedUpdate()
     {
         ballVelocity = _ball.velocity;
-
-        Vector3 pos = _ball.transform.position;
-        pos.y = 0.015f;
-        _ballShadow.position = pos;
     }
-
-
 
     protected virtual void Update()
     {
         if (isGameOver) return;  // 게임 종료 시 입력 무시
 
-        if (_isShooting)
-        {       // neu banh chua vao luoi hoac trung thu mon, khung thanh thi banh duoc phep bay voi van toc dang co
+        if (fingerTrail)
+        {
+            if (shootTriggered && _canShoot)
+            {
+                startTime += Time.deltaTime;
+                fingerTrail.RemoveEventUntil(startTime);
+                bool remain = fingerTrail.IsEventExists();
+                if (remain)
+                {
+                    mouseMove(fingerTrail.GetMousePosition());
+                }
+                else
+                {
+                    mouseEnd();
+                }
+                if (_isShoot)
+                {
+                    Vector3 speed = _ballParent.InverseTransformDirection(_ball.velocity);
+                    speed.z = _zVelocity;
+                    _ball.velocity = _ballParent.TransformDirection(speed);
+                }
+            }
+        }
+        else if (_canShoot)
+        {
+            // neu banh chua vao luoi hoac trung thu mon, khung thanh thi banh duoc phep bay voi van toc dang co
             if (_enableTouch && !_isInTutorial)
             {
                 if (Input.GetMouseButtonDown(0))
@@ -327,6 +351,10 @@ public class Shoot : MonoBehaviour
                 _ball.velocity = _ballParent.TransformDirection(speed);
             }
         }
+
+        Vector3 pos = _ball.transform.position;
+        pos.y = 0.015f;
+        _ballShadow.position = pos;
     }
 
 
@@ -350,7 +378,6 @@ public class Shoot : MonoBehaviour
         {
             _prePos = _curPos;
             _curPos = pos;
-
 
             Vector3 distance = _curPos - beginPos;
 
@@ -409,14 +436,23 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    public void ShootBall()
+    {
+        startTime = 0f;
+        shootTriggered = true;
+        mouseBegin(fingerTrail.GetMousePosition());
 
+        Debug.Log("ShootBall");
+    }
 
     protected void OnCollisionEnter(Collision other)
     {
         string tag = other.gameObject.tag;
         if (tag.Equals("Player") || tag.Equals("Obstacle") || tag.Equals("Net") || tag.Equals("Wall"))
         {   // banh trung thu mon hoac khung thanh hoac da vao luoi roi thi ko cho banh bay voi van toc nua, luc nay de~ cho physics engine tinh' toan' quy~ dao bay
-            _isShooting = false;
+            Debug.Log($"Collision with {tag}");
+
+            _canShoot = false;
 
             if (tag.Equals("Net"))
             {
@@ -455,13 +491,22 @@ public class Shoot : MonoBehaviour
 
         _canControlBall = true;
         _isShoot = false;
-        _isShooting = true;
+
+        if (fingerTrail != null)
+        {
+            fingerTrail.Reset();
+            shootTriggered = false;
+            _canShoot = true;
+        }
+        else
+        {
+            _canShoot = true;
+        }
 
         // reset ball
         _ball.velocity = Vector3.zero;
         _ball.angularVelocity = Vector3.zero;
         _ball.transform.localEulerAngles = Vector3.zero;
-
 
         Vector3 pos = new Vector3(BallPositionX, 0f, BallPositionZ);
         Vector3 diff = -pos;

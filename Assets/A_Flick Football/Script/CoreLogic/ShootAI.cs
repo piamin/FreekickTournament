@@ -68,7 +68,7 @@ public class ShootAI : Shoot {
 		if(GoalKeeperHorizontalFly.share.IsAIControl && willBeShootByUser) {
 			base.Update();
 		}
-		else if(_isShooting && _isShootByAI) {
+		else if(_canShoot && _isShootByAI) {
 
 			while(_cachedTrans.position.z > _ballPath[_index].z && _index >= 1) {
 				--_index;
