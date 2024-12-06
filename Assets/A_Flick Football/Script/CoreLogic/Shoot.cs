@@ -111,6 +111,11 @@ public class Shoot : MonoBehaviour
     private float startTime = 0f;
     private bool shootTriggered = false;
 
+    public Vector3 addForce = Vector3.zero;
+    private float addForceDuration = 1f;
+
+    private Tweener oldTween;
+
     protected virtual void Awake()
     {
         share = this;
@@ -297,6 +302,11 @@ public class Shoot : MonoBehaviour
     void FixedUpdate()
     {
         ballVelocity = _ball.velocity;
+
+        if (_isShoot)
+        {
+            _ball.AddForce(addForce, ForceMode.Acceleration);
+        }
     }
 
     protected virtual void Update()
@@ -307,17 +317,17 @@ public class Shoot : MonoBehaviour
         {
             if (shootTriggered && _canShoot)
             {
-                startTime += Time.deltaTime;
-                fingerTrail.RemoveEventUntil(startTime);
-                bool remain = fingerTrail.IsEventExists();
-                if (remain)
-                {
-                    mouseMove(fingerTrail.GetMousePosition());
-                }
-                else
-                {
-                    mouseEnd();
-                }
+                // startTime += Time.deltaTime;
+                // fingerTrail.RemoveEventUntil(startTime);
+                // bool remain = fingerTrail.IsEventExists();
+                // if (remain)
+                // {
+                //     mouseMove(fingerTrail.GetMousePosition());
+                // }
+                // else
+                // {
+                //     mouseEnd();
+                // }
                 if (_isShoot)
                 {
                     Vector3 speed = _ballParent.InverseTransformDirection(_ball.velocity);
@@ -436,11 +446,27 @@ public class Shoot : MonoBehaviour
         }
     }
 
-    public void ShootBall()
+    public void ShootBall(Vector3 speed, Vector3 addForce, float duration)
     {
-        startTime = 0f;
-        shootTriggered = true;
-        mouseBegin(fingerTrail.GetMousePosition());
+        // startTime = 0f;      
+        // shootTriggered = true;
+        // mouseBegin(fingerTrail.GetMousePosition());
+        _canControlBall = false;
+        _isShoot = true;
+
+        this.addForce = _ballParent.TransformDirection(addForce);
+        oldTween = HOTween.To(this, duration, new TweenParms()
+                    .Prop("addForce", Vector3.zero)
+                    .Ease(EaseType.Linear)
+                    .OnComplete(() =>
+                    {
+                        oldTween = null;
+                    }));
+
+        _ball.velocity = _ballParent.TransformDirection(speed);
+        _ball.angularVelocity = addForce;
+
+        EventShoot?.Invoke();
 
         Debug.Log("ShootBall");
     }
@@ -453,6 +479,13 @@ public class Shoot : MonoBehaviour
             Debug.Log($"Collision with {tag}");
 
             _canShoot = false;
+
+            if (oldTween != null)
+            {
+                addForce = Vector3.zero;
+                oldTween.Kill();
+                oldTween = null;
+            }
 
             if (tag.Equals("Net"))
             {
