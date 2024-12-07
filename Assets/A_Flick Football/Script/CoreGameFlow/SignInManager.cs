@@ -63,7 +63,7 @@ public class SignInManager : MonoBehaviour
         else
         {
             // 신규 사용자: 사용자 이름 입력 UI 표시 및 UUID 생성
-            userNameInput.text = "Player_" + Random.Range(10001, 999999).ToString();
+            userNameInput.text = "MVP_" + Random.Range(10001, 999999).ToString();
             userNameInput.characterLimit = 16;
             newNickNameUI.SetActive(true);
             loadingScreenPrefab.SetActive(false);
