@@ -295,6 +295,7 @@ public class FingerTrail : MonoBehaviour
             isTouching = true;
 
             touchTime = 0f;
+            touchPositions.Clear();
             touchPositions.Add(new KeyValuePair<float, Vector3>(touchTime, Input.mousePosition));
 
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
