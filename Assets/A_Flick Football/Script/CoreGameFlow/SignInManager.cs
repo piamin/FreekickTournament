@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 public class SignInManager : MonoBehaviour
 {
-    public GameObject message; // Message ������Ʈ
+    public GameObject message; // Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     public GameObject checkNetworkMsg;
     public GameObject warningMessage;
     public GameObject loadingScreenPrefab;
 
     public GameObject newNickNameUI;
-    public TMP_InputField userNameInput; // TMP_InputField�� ����
+    public TMP_InputField userNameInput; // TMP_InputFieldï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     [Space(10)]
     public Animator backgroundAnimator;
@@ -28,10 +28,10 @@ public class SignInManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         loadingScreenPrefab.SetActive(true);
-        message.SetActive(false); // �⺻������ Message ������Ʈ ��Ȱ��ȭ
+        message.SetActive(false); // ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
 
 #if !UNITY_WEBGL
-        firestoreManager = FindObjectOfType<FirestoreManager>(); // FirestoreManager �ν��Ͻ� ��������
+        firestoreManager = FindObjectOfType<FirestoreManager>(); // FirestoreManager ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         if (firestoreManager == null)
         {
@@ -69,23 +69,23 @@ public class SignInManager : MonoBehaviour
         }
         else
         {
-            // �ű� �����: ����� �̸� �Է� UI ǥ�� �� UUID ����
-            userNameInput.text = "Player_" + Random.Range(10001, 999999).ToString();
+            // ½Å±Ô »ç¿ëÀÚ: »ç¿ëÀÚ ÀÌ¸§ ÀÔ·Â UI Ç¥½Ã ¹× UUID »ý¼º
+            userNameInput.text = "MVP_" + Random.Range(10001, 999999).ToString();
             userNameInput.characterLimit = 16;
             newNickNameUI.SetActive(true);
             loadingScreenPrefab.SetActive(false);
 
-            // Message ������Ʈ Ȱ��ȭ
+            // Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­
             message.SetActive(true);
 
-            // ���ο� UUID ���� �� ����
+            // ï¿½ï¿½ï¿½Î¿ï¿½ UUID ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (!PlayerPrefs.HasKey("UserUUID"))
             {
-                // UUID�� 16�ڸ��� ����
+                // UUIDï¿½ï¿½ 16ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 string userUUID = System.Guid.NewGuid().ToString().Replace("-", "").Substring(0, 12);
                 PlayerPrefs.SetString("UserUUID", userUUID);
 
-                // ������� UUID�� ����մϴ�.
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UUIDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
                 Debug.Log("New User UUID: " + userUUID);
             }
 
@@ -109,10 +109,10 @@ public class SignInManager : MonoBehaviour
 #if !UNITY_WEBGL
             if (firestoreManager != null)
             {
-                string clientVersion = Application.version; // Ŭ���̾�Ʈ ���� ��������
+                string clientVersion = Application.version; // Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 Debug.Log($"Attempting to save user info: {userUUID}, {userName}");
                 var saveTask = firestoreManager.SaveUserInfo(userUUID, userName, clientVersion);
-                await saveTask; // �񵿱� ���� �۾��� ��ٸ�
+                await saveTask; // ï¿½ñµ¿±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½
                 if (saveTask.IsCompleted)
                 {
                     Debug.Log("User info saved to Firestore.");
@@ -138,7 +138,7 @@ public class SignInManager : MonoBehaviour
 
     private void ProceedToMainScene()
     {
-        PlayerPrefs.SetInt("IsNewUser", 0); // ���� ����ڷ� ����
+        PlayerPrefs.SetInt("IsNewUser", 0); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½
         PlayerPrefs.Save();
 
         loadingScreenPrefab.SetActive(true);
@@ -155,12 +155,12 @@ public class SignInManager : MonoBehaviour
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
-            // ��Ʈ��ũ ������ ���� �� ó��
+            // ï¿½ï¿½Æ®ï¿½ï¿½Å© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
             checkNetworkMsg.SetActive(true);
         }
         else
         {
-            // ��Ʈ��ũ ������ ���� �� ó��
+            // ï¿½ï¿½Æ®ï¿½ï¿½Å© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
             checkNetworkMsg.SetActive(false);
         }
     }
@@ -183,7 +183,7 @@ public class SignInManager : MonoBehaviour
 
     public void TutorialStage_start()
     {
-        PlayerPrefs.SetInt("IsNewUser", 0); // ���� ����ڷ� ����
+        PlayerPrefs.SetInt("IsNewUser", 0); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½
         PlayerPrefs.Save();
         SceneManager.LoadScene("0.Welcome");
     }
