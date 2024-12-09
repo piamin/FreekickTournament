@@ -161,7 +161,7 @@ public class FingerTrail : MonoBehaviour
 
     void HandleShoot()
     {
-        if (touchPositions.Count < 3 || touchTime < 0.1f)
+        if (touchPositions.Count < 10 || touchTime < 0.2f)
             return;
 
         Vector3 firstTouch = touchPositions[0].Value;
@@ -207,13 +207,15 @@ public class FingerTrail : MonoBehaviour
 
         // var yAngle = 45f;
 
-        var addForceFactor = Mathf.Clamp(Mathf.Abs(angleSum), 0f, 240f) / 240f;
+        var addForceFactor = Mathf.Clamp(Mathf.Abs(angleSum), 0f, 180f) / 180f;
+        addForceFactor = Mathf.Clamp( Mathf.Log(addForceFactor) + 1, 0f, 1f);
         Debug.Log("addForceFactor: " + addForceFactor);
 
         var power = 12f * (1.0f - (touchTime - 0.1f) / 0.9f) + 28f;
-        var forcePower = power * addForceFactor;
+        power *= Mathf.Clamp((topMost.y - bottomMost.y) / (Screen.height * 0.5f), 0.7f, 1.1f);
+
+        var forcePower = power * addForceFactor * 0.9f;
         forcePower *= Mathf.Clamp((rightMost.y - leftMost.y) / (Screen.width * 0.4f), 1f, 1.2f);
-        power *= Mathf.Clamp((topMost.y - bottomMost.y) / (Screen.height * 0.4f), 0.9f, 1.1f);
 
         var direction = Quaternion.Euler(yAngle, xAngle, 0);
         var speed = direction * Vector3.forward * power;

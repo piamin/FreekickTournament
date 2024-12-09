@@ -1,7 +1,9 @@
+#if !UNITY_WEBGL
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks; // Ãß°¡
+using System.Threading.Tasks; // ï¿½ß°ï¿½
 using UnityEngine;
 using Firebase;
 using Firebase.Firestore;
@@ -28,18 +30,18 @@ public class FirestoreManager : MonoBehaviour
         });
     }
 
-    // ¼­¹ö ½Ã°£À» °¡Á®¿À´Â ¸Þ¼­µå Ãß°¡
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
     public void GetServerTimestamp(Action<int> onTimestampReceived)
     {
         DocumentReference docRef = db.Collection("server_time").Document("current_time");
 
-        // ¼­¹ö ½Ã°£ ¼³Á¤ ¿äÃ»
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»
         docRef.SetAsync(new Dictionary<string, object> { { "timestamp", FieldValue.ServerTimestamp } })
             .ContinueWithOnMainThread(setTask =>
             {
                 if (setTask.IsCompleted)
                 {
-                    // ¼­¹ö ½Ã°£ °¡Á®¿À±â
+                    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     docRef.GetSnapshotAsync().ContinueWithOnMainThread(snapshotTask =>
                     {
                         if (snapshotTask.IsCompleted)
@@ -90,7 +92,7 @@ public class FirestoreManager : MonoBehaviour
             { "mode", databaseName }
         };
 
-        // °íÀ¯ÇÑ ¹®¼­ ID »ý¼º
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ID ï¿½ï¿½ï¿½ï¿½
         string documentID = Guid.NewGuid().ToString();
 
         db.Collection("RankData").Document(documentID).SetAsync(rankData).ContinueWithOnMainThread(task => {
@@ -117,7 +119,7 @@ public class FirestoreManager : MonoBehaviour
             { "score", score }
         };
 
-        // °íÀ¯ÇÑ ¹®¼­ ID »ý¼º
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ID ï¿½ï¿½ï¿½ï¿½
         string documentID = Guid.NewGuid().ToString();
 
         db.Collection(databaseName).Document(documentID).SetAsync(gameData).ContinueWithOnMainThread(task => {
@@ -152,7 +154,7 @@ public class FirestoreManager : MonoBehaviour
 
                     bool isUpdateRequired = false;
 
-                    // ÇöÀç Å¬¶óÀÌ¾ðÆ® ¹öÀüÀÌ ÃÖ½Å ¹öÀüÀÎÁö Ã¼Å©
+                    // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
 #if UNITY_ANDROID
                     isUpdateRequired = string.Compare(currentVersion, latestAndroidVersion) < 0;
 #elif UNITY_IOS
@@ -177,3 +179,5 @@ public class FirestoreManager : MonoBehaviour
 
 
 }
+
+#endif

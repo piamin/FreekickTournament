@@ -246,6 +246,7 @@ public class Shoot : MonoBehaviour
 
     private void SendGameResult()
     {
+#if !UNITY_WEBGL
         // FirestoreManager 인스턴스 가져오기
         FirestoreManager firestoreManager = FindObjectOfType<FirestoreManager>();
 
@@ -265,6 +266,9 @@ public class Shoot : MonoBehaviour
         {
             Debug.LogError("FirestoreManager instance not found.");
         }
+#else
+        JavaScriptBridge.SaveScoreToServer(score);
+#endif
     }
 
     public void OnConfirmButtonClicked()
@@ -520,7 +524,6 @@ public class Shoot : MonoBehaviour
         EventChangeBallX(x);
         BallPositionZ = z;
         EventChangeBallZ(z);
-
 
         _canControlBall = true;
         _isShoot = false;

@@ -9,34 +9,41 @@ using System.Threading.Tasks;
 
 public class SignInManager : MonoBehaviour
 {
-    public GameObject message; // Message ¿ÀºêÁ§Æ®
+    public GameObject message; // Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     public GameObject checkNetworkMsg;
     public GameObject warningMessage;
     public GameObject loadingScreenPrefab;
 
     public GameObject newNickNameUI;
-    public TMP_InputField userNameInput; // TMP_InputField·Î º¯°æ
+    public TMP_InputField userNameInput; // TMP_InputFieldï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     [Space(10)]
     public Animator backgroundAnimator;
 
+#if !UNITY_WEBGL
     private FirestoreManager firestoreManager;
+#endif
 
     void Start()
     {
         Application.targetFrameRate = 60;
         loadingScreenPrefab.SetActive(true);
-        message.SetActive(false); // ±âº»ÀûÀ¸·Î Message ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
-        firestoreManager = FindObjectOfType<FirestoreManager>(); // FirestoreManager ÀÎ½ºÅÏ½º °¡Á®¿À±â
+        message.SetActive(false); // ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
+
+#if !UNITY_WEBGL
+        firestoreManager = FindObjectOfType<FirestoreManager>(); // FirestoreManager ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
         if (firestoreManager == null)
         {
             Debug.LogError("FirestoreManager is not found in the scene.");
         }
-        else
+    else
         {
+#endif
             StartCoroutine(InitializeSignInProcess());
+#if !UNITY_WEBGL
         }
+#endif
     }
 
     IEnumerator InitializeSignInProcess()
@@ -62,23 +69,23 @@ public class SignInManager : MonoBehaviour
         }
         else
         {
-            // ½Å±Ô »ç¿ëÀÚ: »ç¿ëÀÚ ÀÌ¸§ ÀÔ·Â UI Ç¥½Ã ¹× UUID »ý¼º
+            // ï¿½Å±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ UI Ç¥ï¿½ï¿½ ï¿½ï¿½ UUID ï¿½ï¿½ï¿½ï¿½
             userNameInput.text = "Player_" + Random.Range(10001, 999999).ToString();
             userNameInput.characterLimit = 16;
             newNickNameUI.SetActive(true);
             loadingScreenPrefab.SetActive(false);
 
-            // Message ¿ÀºêÁ§Æ® È°¼ºÈ­
+            // Message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­
             message.SetActive(true);
 
-            // »õ·Î¿î UUID »ý¼º ¹× ÀúÀå
+            // ï¿½ï¿½ï¿½Î¿ï¿½ UUID ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (!PlayerPrefs.HasKey("UserUUID"))
             {
-                // UUID´Â 16ÀÚ¸®·Î »ý¼º
+                // UUIDï¿½ï¿½ 16ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 string userUUID = System.Guid.NewGuid().ToString().Replace("-", "").Substring(0, 12);
                 PlayerPrefs.SetString("UserUUID", userUUID);
 
-                // »ç¿ëÀÚÀÇ UUID¸¦ ±â·ÏÇÕ´Ï´Ù.
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UUIDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
                 Debug.Log("New User UUID: " + userUUID);
             }
 
@@ -99,13 +106,13 @@ public class SignInManager : MonoBehaviour
             string userUUID = PlayerPrefs.GetString("UserUUID");
             PlayerPrefs.SetString("UserName", userName);
             PlayerPrefs.Save();
-
+#if !UNITY_WEBGL
             if (firestoreManager != null)
             {
-                string clientVersion = Application.version; // Å¬¶óÀÌ¾ðÆ® ¹öÀü °¡Á®¿À±â
+                string clientVersion = Application.version; // Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 Debug.Log($"Attempting to save user info: {userUUID}, {userName}");
                 var saveTask = firestoreManager.SaveUserInfo(userUUID, userName, clientVersion);
-                await saveTask; // ºñµ¿±â ÀúÀå ÀÛ¾÷À» ±â´Ù¸²
+                await saveTask; // ï¿½ñµ¿±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½
                 if (saveTask.IsCompleted)
                 {
                     Debug.Log("User info saved to Firestore.");
@@ -123,12 +130,15 @@ public class SignInManager : MonoBehaviour
                 Debug.LogError("FirestoreManager instance is not found.");
                 ProceedToMainScene();
             }
+#else
+            ProceedToMainScene();
+#endif
         }
     }
 
     private void ProceedToMainScene()
     {
-        PlayerPrefs.SetInt("IsNewUser", 0); // ±âÁ¸ »ç¿ëÀÚ·Î ¼³Á¤
+        PlayerPrefs.SetInt("IsNewUser", 0); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½
         PlayerPrefs.Save();
 
         loadingScreenPrefab.SetActive(true);
@@ -145,12 +155,12 @@ public class SignInManager : MonoBehaviour
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
-            // ³×Æ®¿öÅ© ¿¬°áÀÌ ¾øÀ» ¶§ Ã³¸®
+            // ï¿½ï¿½Æ®ï¿½ï¿½Å© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
             checkNetworkMsg.SetActive(true);
         }
         else
         {
-            // ³×Æ®¿öÅ© ¿¬°áÀÌ ÀÖÀ» ¶§ Ã³¸®
+            // ï¿½ï¿½Æ®ï¿½ï¿½Å© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
             checkNetworkMsg.SetActive(false);
         }
     }
@@ -173,7 +183,7 @@ public class SignInManager : MonoBehaviour
 
     public void TutorialStage_start()
     {
-        PlayerPrefs.SetInt("IsNewUser", 0); // ±âÁ¸ »ç¿ëÀÚ·Î ¼³Á¤
+        PlayerPrefs.SetInt("IsNewUser", 0); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½
         PlayerPrefs.Save();
         SceneManager.LoadScene("0.Welcome");
     }

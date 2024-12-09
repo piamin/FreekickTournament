@@ -1,81 +1,89 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+#if !UNITY_WEBGL
 using Firebase;
 using Firebase.Firestore;
 using Firebase.Extensions;
+#endif
 using System.Collections;
 using System.Text.RegularExpressions;
 
 public class MainScreen : MonoBehaviour
 {
-    public GameObject ProfileUI; // ÇÁ·ÎÇÊ UI
-    public TMP_Text userNameMainDisplay; // »ç¿ëÀÚ ÀÌ¸§À» Ç¥½ÃÇÏ´Â UI Text ¿ä¼ÒÀÔ´Ï´Ù.
-    public GameObject updateMessage; // ¾÷µ¥ÀÌÆ® ¸Þ½ÃÁö¸¦ Ç¥½ÃÇÒ ¿ÀºêÁ§Æ®
+    public GameObject ProfileUI; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UI
+    public TMP_Text userNameMainDisplay; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï´ï¿½ UI Text ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+    public GameObject updateMessage; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
+#if !UNITY_WEBGL
     [Space(10)]
     private FirestoreManager firestoreManager;
-    private string clientVersion; // Å¬¶óÀÌ¾ðÆ® ºôµå ¹öÀü
+#endif
+    private string clientVersion; // Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     /// <summary>
-    /// ÇÁ·ÎÇÊ °ü·Ã ºÎºÐ
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½
     /// </summary>
 
 
     [Space(10)]
-    public TMP_InputField nicknameInputField; // ´Ð³×ÀÓ ÀÔ·Â ÇÊµå
-    public TMP_Text playerIDText; // ÇÃ·¹ÀÌ¾î ID¸¦ ³ªÅ¸³»´Â ÅØ½ºÆ®
+    public TMP_InputField nicknameInputField; // ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Êµï¿½
+    public TMP_Text playerIDText; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ IDï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
 
     [Space(10)]
-    public GameObject changeNicknameUI; // ´Ð³×ÀÓ º¯°æ UI °ÔÀÓ ¿ÀºêÁ§Æ®
+    public GameObject changeNicknameUI; // ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     [Space(10)]
-    public GameObject warningMessage; // °æ°í ¸Þ½ÃÁö¸¦ ³ªÅ¸³»´Â °ÔÀÓ ¿ÀºêÁ§Æ®
-    public GameObject copyMessage; // º¹»ç ¸Þ½ÃÁö¸¦ ³ªÅ¸³»´Â °ÔÀÓ ¿ÀºêÁ§Æ®
+    public GameObject warningMessage; // ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public GameObject copyMessage; // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     [Space(10)]
-    public TMP_Text titleScreenNickname; // Å¸ÀÌÆ² È­¸é¿¡ Ç¥½ÃµÇ´Â ´Ð³×ÀÓ ÅØ½ºÆ®
-    public event System.Action OnProfileUIClosed; // ÇÁ·ÎÇÊ UI°¡ ´ÝÈú ¶§ ¹ß»ýÇÏ´Â ÀÌº¥Æ®
+    public TMP_Text titleScreenNickname; // Å¸ï¿½ï¿½Æ² È­ï¿½é¿¡ Ç¥ï¿½ÃµÇ´ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
+    public event System.Action OnProfileUIClosed; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï´ï¿½ ï¿½Ìºï¿½Æ®
 
-
-
+#if !UNITY_WEBGL
     private FirebaseFirestore db;
+#endif
 
 
     void Start()
     {
         playerIDText.text = PlayerPrefs.GetString("UserUUID", "Unknown");
-        nicknameInputField.text = PlayerPrefs.GetString("UserName", "Player"); // ±âÁ¸ ´Ð³×ÀÓÀ» ÀÔ·Â ÇÊµå¿¡ ¼³Á¤
+        nicknameInputField.text = PlayerPrefs.GetString("UserName", "Player"); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Êµå¿¡ ï¿½ï¿½ï¿½ï¿½
 
-        clientVersion = Application.version; // Start ¸Þ¼­µå¿¡¼­ Å¬¶óÀÌ¾ðÆ® ¹öÀü °¡Á®¿À±â
+        clientVersion = Application.version; // Start ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+#if !UNITY_WEBGL
         firestoreManager = FindObjectOfType<FirestoreManager>();
 
         if (firestoreManager == null)
         {
             Debug.LogError("FirestoreManager is not found in the scene.");
         }
+#endif
 
-        // »ç¿ëÀÚ ÀÌ¸§À» ·ÎµåÇÏ¿© Ç¥½ÃÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½Ï¿ï¿½ Ç¥ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         LoadUserName();
 
-        // ÇÃ·¹ÀÌ¾î Á¤º¸¿Í ºôµå ¹öÀü ÀúÀå
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         SavePlayerInfo();
 
-        // Å¬¶óÀÌ¾ðÆ® ¹öÀü Ã¼Å©
+        // Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
         CheckVersionAndUpdateMessage();
 
     }
 
-    // »ç¿ëÀÚ ÀÌ¸§À» ·ÎµåÇÏ¿© UI¿¡ Ç¥½ÃÇÕ´Ï´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½Ï¿ï¿½ UIï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
     void LoadUserName()
     {
         string userName = PlayerPrefs.GetString("UserName", "Player");
         userNameMainDisplay.text = userName;
     }
 
-    // ÇÃ·¹ÀÌ¾î Á¤º¸¿Í ºôµå ¹öÀüÀ» Firestore¿¡ ÀúÀåÇÕ´Ï´Ù.
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Firestoreï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
     void SavePlayerInfo()
     {
+#if !UNITY_WEBGL
         string playerID = PlayerPrefs.GetString("UserUUID");
         string userName = PlayerPrefs.GetString("UserName", "Player");
 
@@ -83,13 +91,15 @@ public class MainScreen : MonoBehaviour
         {
             firestoreManager.SaveUserInfo(playerID, userName, clientVersion);
         }
+#endif
     }
 
 
 
-    // MainScreen Å¬·¡½º¿¡¼­ CheckVersionAndUpdateMessage ¸Þ¼­µå ¼öÁ¤
+    // MainScreen Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ CheckVersionAndUpdateMessage ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     void CheckVersionAndUpdateMessage()
     {
+#if !UNITY_WEBGL
         if (firestoreManager != null)
         {
             Debug.Log("Starting version check...");
@@ -98,12 +108,12 @@ public class MainScreen : MonoBehaviour
                 if (isUpdateRequired)
                 {
                     Debug.Log("Update required. Showing update message.");
-                    updateMessage.SetActive(true); // ¾÷µ¥ÀÌÆ® ¸Þ½ÃÁö Ç¥½Ã
+                    updateMessage.SetActive(true); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
                 }
                 else
                 {
                     Debug.Log("No update required.");
-                    updateMessage.SetActive(false); // ¾÷µ¥ÀÌÆ® ¸Þ½ÃÁö ¼û±â±â
+                    updateMessage.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
                 }
             });
         }
@@ -111,6 +121,7 @@ public class MainScreen : MonoBehaviour
         {
             Debug.LogError("FirestoreManager is not available.");
         }
+#endif
     }
 
 
@@ -122,7 +133,7 @@ public class MainScreen : MonoBehaviour
     public void profileUI_open()
     {
         ProfileUI.SetActive(true);
-        nicknameInputField.text = PlayerPrefs.GetString("UserName", "Player"); // ±âÁ¸ ´Ð³×ÀÓÀ» ÀÔ·Â ÇÊµå¿¡ ¼³Á¤
+        nicknameInputField.text = PlayerPrefs.GetString("UserName", "Player"); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Êµå¿¡ ï¿½ï¿½ï¿½ï¿½
 
     }
 
@@ -131,24 +142,14 @@ public class MainScreen : MonoBehaviour
         ProfileUI.SetActive(false);
     }
 
-
-
-
-
-
-
-
-
-
-
-    // ÇÁ·ÎÇÊ µ¥ÀÌÅÍ¸¦ ·ÎµåÇÏ´Â ¸Þ¼­µå
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Îµï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void LoadProfileData()
     {
-        // ÇÃ·¹ÀÌ¾î ID¸¦ PlayerPrefs¿¡¼­ °¡Á®¿È
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ IDï¿½ï¿½ PlayerPrefsï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         string playerID = PlayerPrefs.GetString("UserUUID", "Unknown");
         playerIDText.text = playerID;
 
-        // PlayerPrefs¿¡¼­ ´Ð³×ÀÓÀ» °¡Á®¿È
+        // PlayerPrefsï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         string userName = PlayerPrefs.GetString("UserName", "Player");
         userNameMainDisplay.text = userName;
     }
@@ -156,11 +157,11 @@ public class MainScreen : MonoBehaviour
     bool isChangeNickOpen;
 
 
-    // ´Ð³×ÀÓÀÌ º¯°æµÉ ¶§ È£ÃâµÇ´Â ¸Þ¼­µå
+    // ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void OnNicknameChange()
     {
         string userName = nicknameInputField.text;
-        // ´Ð³×ÀÓ¿¡ Çã¿ëµÇÁö ¾Ê´Â ¹®ÀÚ°¡ Æ÷ÇÔµÈ °æ¿ì °æ°í ¸Þ½ÃÁö¸¦ Ç¥½ÃÇÏ°í ÀÏÁ¤ ½Ã°£ ÈÄ¿¡ ¼û±è
+        // ï¿½Ð³ï¿½ï¿½Ó¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (Regex.IsMatch(userName, @"[^a-zA-Z0-9_-]"))
         {
             warningMessage.SetActive(true);
@@ -168,28 +169,31 @@ public class MainScreen : MonoBehaviour
         }
         else
         {
-            // PlayerPrefs¿¡ ´Ð³×ÀÓ ÀúÀå
+            // PlayerPrefsï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             PlayerPrefs.SetString("UserName", userName);
             PlayerPrefs.Save();
 
             nicknameInputField.text = userName;
             titleScreenNickname.text = userName;
-            //changeNicknameUI.SetActive(false); // ÇÁ·ÎÇÊ UI ºñÈ°¼ºÈ­
+            //changeNicknameUI.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½È°ï¿½ï¿½È­
 
-            // Firestore¿¡ ´Ð³×ÀÓ ÀúÀå
+            // Firestoreï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+#if !UNITY_WEBGL
             SaveNicknameToFirestore(userName);
+#endif
         }
     }
 
+#if !UNITY_WEBGL
     private async void SaveNicknameToFirestore(string userName)
     {
         string userUUID = PlayerPrefs.GetString("UserUUID");
         if (firestoreManager != null)
         {
-            string clientVersion = Application.version; // Å¬¶óÀÌ¾ðÆ® ¹öÀü °¡Á®¿À±â
+            string clientVersion = Application.version; // Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Debug.Log($"Attempting to save updated user info: {userUUID}, {userName}");
             var saveTask = firestoreManager.SaveUserInfo(userUUID, userName, clientVersion);
-            await saveTask; // ºñµ¿±â ÀúÀå ÀÛ¾÷À» ±â´Ù¸²
+            await saveTask; // ï¿½ñµ¿±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½
             if (saveTask.IsCompleted)
             {
                 Debug.Log("Updated user info saved to Firestore.");
@@ -205,21 +209,22 @@ public class MainScreen : MonoBehaviour
         {
             Debug.LogError("FirestoreManager instance is not found.");
         }
+
     }
+#endif
 
-
-    // ÇÃ·¹ÀÌ¾î ID¸¦ º¹»çÇÏ´Â ¸Þ¼­µå
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ IDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void OnCopyPlayerID()
     {
         string playerID = playerIDText.text;
-        // ÇÃ·¹ÀÌ¾î ID¸¦ ½Ã½ºÅÛ Å¬¸³º¸µå¿¡ º¹»ç
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ IDï¿½ï¿½ ï¿½Ã½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½å¿¡ ï¿½ï¿½ï¿½ï¿½
         GUIUtility.systemCopyBuffer = playerID;
 
-        copyMessage.SetActive(true); // º¹»ç ¸Þ½ÃÁö Ç¥½Ã
-        StartCoroutine(HideMessageAfterSeconds(copyMessage, 1f)); // ÀÏÁ¤ ½Ã°£ ÈÄ¿¡ ¼û±è
+        copyMessage.SetActive(true); // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
+        StartCoroutine(HideMessageAfterSeconds(copyMessage, 1f)); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 
-    // ÀÏÁ¤ ½Ã°£ ÈÄ¿¡ ¸Þ½ÃÁö¸¦ ¼û±â´Â ÄÚ·çÆ¾
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ä¿ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾
     public IEnumerator HideMessageAfterSeconds(GameObject message, float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -231,18 +236,18 @@ public class MainScreen : MonoBehaviour
 
     public void OnUserNameDisplayClicked()
     {
-        changeNicknameUI.SetActive(true); // ´Ð³×ÀÓ º¯°æ UI È°¼ºÈ­
-        nicknameInputField.text = userNameMainDisplay.text; // ÇöÀç ´Ð³×ÀÓÀ» ÀÔ·Â ÇÊµå¿¡ ¼³Á¤
+        changeNicknameUI.SetActive(true); // ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UI È°ï¿½ï¿½È­
+        nicknameInputField.text = userNameMainDisplay.text; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Êµå¿¡ ï¿½ï¿½ï¿½ï¿½
     }
 
     public void OnChangeNicknameConfirm()
     {
-        OnNicknameChange(); // ´Ð³×ÀÓ º¯°æ ¸Þ¼­µå È£Ãâ
+        OnNicknameChange(); // ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½
     }
 
     public void OnChangeNicknameCancel()
     {
-        changeNicknameUI.SetActive(false); // ´Ð³×ÀÓ º¯°æ UI ºñÈ°¼ºÈ­
+        changeNicknameUI.SetActive(false); // ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½È°ï¿½ï¿½È­
     }
 }
 
