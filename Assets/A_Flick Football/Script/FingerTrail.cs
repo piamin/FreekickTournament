@@ -332,4 +332,14 @@ public class FingerTrail : MonoBehaviour
         trail.Clear();
         trail.enabled = true;
     }
+
+    public void EnableTouch()
+    {
+        canTouch = true;
+    }
+
+    public void DisableTouch()
+    {
+        canTouch = false;
+    }
 }
