@@ -18,7 +18,7 @@ public class Shoot : MonoBehaviour
     public TextMeshProUGUI scoreText;  // 총 스코어를 표시할 텍스트
     public TextMeshProUGUI shotsText;  // 현재 남은 샷 수를 표시할 텍스트
     public TextMeshProUGUI currentScoreText;  // 현재 스코어를 표시할 텍스트
-    public GameObject countdownPrefab;  // 카운트다운 애니메이션 프리팹
+    public GameObject countdownObject;  // 카운트다운 애니메이션 프리팹
 
     public TMP_Text textNickname; // 타이틀 화면에 표시되는 닉네임 텍스트
 
@@ -141,7 +141,7 @@ public class Shoot : MonoBehaviour
 
 
         // 카운트다운 애니메이션 시작
-        if (countdownPrefab != null)
+        if (countdownObject != null)
         {
             StartCoroutine(PlayCountdownAnimation());
         }
@@ -169,20 +169,21 @@ public class Shoot : MonoBehaviour
 
     private IEnumerator PlayCountdownAnimation()
     {
-        GameObject countdownInstance = Instantiate(countdownPrefab);
-        Animator animator = countdownInstance.GetComponent<Animator>();
-
+        Animator animator = countdownObject.GetComponent<Animator>();
         if (animator != null)
         {
             // 한 프레임을 기다려서 애니메이터가 초기화되도록 함
             yield return null;
 
+            fingerTrail.DisableTouch();
+
             // 애니메이션의 클립 길이 가져오기
             float animationLength = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
 
             yield return new WaitForSeconds(animationLength);
-            Destroy(countdownInstance);
-            countdownPrefab.SetActive(false);
+            countdownObject.SetActive(false);
+
+            fingerTrail.EnableTouch();
         }
     }
 
@@ -232,6 +233,7 @@ public class Shoot : MonoBehaviour
 
     private void ShowResult()
     {
+        fingerTrail.DisableTouch();
         StartCoroutine(ShowResultWithDelay());
     }
 
