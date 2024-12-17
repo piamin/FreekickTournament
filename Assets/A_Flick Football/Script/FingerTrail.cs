@@ -59,12 +59,15 @@ public class FingerTrail : MonoBehaviour
     List<Vector3> CalculateVectors(List<Vector3> points)
     {
         List<Vector3> vectors = new List<Vector3>();
-        for (int i = 0; i < points.Count - 1; i++)
+
+        var lastPos = points[0];
+        for (int i = 1; i < points.Count; i++)
         {
-            Vector3 vector = points[i + 1] - points[i];
-            if (vector.magnitude > 0)
+            Vector3 vector = points[i] - lastPos;
+            if (vector.magnitude > 4f)
             {
                 vectors.Add(vector.normalized);
+                lastPos = points[i];
             }
         }
         return vectors;
@@ -84,22 +87,13 @@ public class FingerTrail : MonoBehaviour
     List<float> CalculateAngles(List<Vector3> vectors)
     {
         List<float> angles = new List<float>();
+
         for (int i = 0; i < vectors.Count - 1; i++)
         {
-            Vector3 v1 = vectors[i];
-            Vector3 v2 = vectors[i + 1];
-            float cosTheta = Vector3.Dot(v1, v2);
-            float angle = Mathf.Acos(Mathf.Clamp(cosTheta, -1.0f, 1.0f));
-
-            // Determine the sign of the angle using the cross product
-            float crossProduct = Vector3.Cross(v1, v2).z;
-            if (crossProduct < 0)
-            {
-                angle = -angle;
-            }
-
+            var angle = Vector3.SignedAngle(vectors[i + 1], vectors[i], Vector3.forward);
             angles.Add(angle);
         }
+
         return angles;
     }
 
@@ -191,7 +185,7 @@ public class FingerTrail : MonoBehaviour
         float startXdir = CalculateStartDirection();
         startXdir = Mathf.Clamp(startXdir, -50f, 50f);
         // float variance = CalculateVariance(angles);
-        float angleSum = CalculateAngleSum(angles) / Mathf.PI * 180f;
+        float angleSum = CalculateAngleSum(angles);
 
         float magnitudeSum = CalculateVectorsMagnitudeSum(points);
 
@@ -207,15 +201,15 @@ public class FingerTrail : MonoBehaviour
 
         // var yAngle = 45f;
 
-        var addForceFactor = Mathf.Clamp(Mathf.Abs(angleSum), 0f, 180f) / 180f;
-        addForceFactor = Mathf.Clamp( Mathf.Log(addForceFactor) + 1, 0f, 1f);
+        var addForceFactor = Mathf.Clamp(Mathf.Abs(angleSum), 0f, 220f) / 220f;
+        //addForceFactor = Mathf.Clamp( Mathf.Log(addForceFactor) + 1, 0f, 1f);
         Debug.Log("addForceFactor: " + addForceFactor);
 
         var power = 12f * (1.0f - (touchTime - 0.1f) / 0.9f) + 28f;
-        power *= Mathf.Clamp((topMost.y - bottomMost.y) / (Screen.height * 0.5f), 0.7f, 1.1f);
+        power *= Mathf.Clamp((topMost.y - bottomMost.y) / (Screen.height * 0.5f), 0.8f, 1.2f);
 
-        var forcePower = power * addForceFactor * 0.9f;
-        forcePower *= Mathf.Clamp((rightMost.y - leftMost.y) / (Screen.width * 0.4f), 1f, 1.2f);
+        var forcePower = power * addForceFactor;
+        forcePower *= Mathf.Clamp((rightMost.x- leftMost.x) / (Screen.width * 0.4f), 0.8f, 1.2f);
 
         var direction = Quaternion.Euler(yAngle, xAngle, 0);
         var speed = direction * Vector3.forward * power;
